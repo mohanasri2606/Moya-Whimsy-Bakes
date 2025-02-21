@@ -1,13 +1,28 @@
 /********** Template CSS **********/
 :root {
-    --primary: #E88F2A;
+    --primary: #ff709e;
     --secondary: #FAF3EB;
     --light: #FFFFFF;
     --dark: #2B2825;
 }
-
 .font-secondary {
     font-family: 'Pacifico', cursive;
+}
+#dreamy{
+    color: #fce3f1;
+    font-weight: 0;
+}
+.text-lg-start .text-uppercase{
+    font-size: 60px;
+}
+#sub-head{
+    font-size: 35px;
+}
+.text-primary .font-secondary {
+    font-family: 'Pacifico', cursive;
+}
+.fa-birthday{
+    padding-top: -1px;
 }
 
 h1,
@@ -36,6 +51,12 @@ h6,
 
 .btn-primary {
     color: #FFFFFF;
+}
+
+.hero-header {
+    background: url('../img/hero.jpg') center no-repeat;
+    background-size: 1350px 635px;
+    height: 100vh;
 }
 
 .border-inner {
@@ -108,7 +129,83 @@ h6,
 
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link.active {
-    color: var(--primary);
+    color: #fc83aa;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    /* Hero Section */
+    .hero-header {
+        background: url('../img/hero-mobile.png') center no-repeat;
+        background-size: cover;
+    }
+
+    .hero-header {
+        background-size: cover !important;
+        background-position: center !important;
+        height: 90vh;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .hero-header h1 {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+    .hero-header .display-1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-header h1.text-uppercase {
+        font-size: 1.8rem;
+    }
+
+    /* Centering Play Button */
+    .btn-play {
+        width: 50px;
+        height: 50px;
+    }
+
+    .btn-play span {
+        width: 20px;
+        height: 20px;
+    }
+
+    /* Navbar Fix */
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .navbar-toggler {
+        margin-right: 10px;
+    }
+
+    /* Video Modal */
+    .modal-dialog {
+        max-width: 90%;
+    }
+    
+    .hero-header .col-lg-8 {
+        text-align: center !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero-header h1 {
+        width: 100%; /* Ensures the text block takes full width */
+        font-size: 28px; /* Adjust font size for better readability */
+        line-height: 1.3;
+    }
+
+    .hero-header .btn-play {
+        margin-top: 20px; /* Adds spacing for the play button */
+    }
+    #sub-head{
+        font-size: 24px;
+    }
 }
 
 @media (max-width: 991.98px) {
@@ -117,10 +214,53 @@ h6,
     }
 }
 
-.hero-header {
-    background: url(../img/hero.jpg) top right no-repeat;
-    background-size: cover;
+.hero-header .dreamy-frosting {
+    color: #ffeff4; 
 }
+/* about start */
+.m-0 {
+    font-size: 34px;
+}
+.col-lg-4 .m-0 {
+    font-size: 22px;
+}
+.mb-4 {
+    color: #ff3a78;
+}
+.display-4 {
+    font-size: 28px;
+}
+.pb-5{
+    text-align:justify;
+    hyphens: auto;
+}
+/* about ends */
+#title {
+    margin-bottom: 0.1rem !important;
+}
+.container-fluid {
+    padding-top: 0 !important; /* Ensures no extra padding at the top */
+}
+/* pages start*/
+.dropdown-menu {
+    font-family: 'Oswald', sans-serif;
+    padding: 30px 15px;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--light);
+    outline: none;
+    transition: .5s;
+}
+#service-para {
+    text-align: justify;
+}
+/* pages start*/
+/* footer start */
+.mt-3 {
+    text-align: justify;
+}
+/* footer ends */
 
 .btn-play {
     position: relative;
@@ -172,10 +312,16 @@ h6,
     width: 0;
     height: 0;
     left: -1px;
-    border-left: 16px solid var(--primary);
+    border-left: 16px solid #fc83aa;
     border-top: 11px solid transparent;
     border-bottom: 11px solid transparent;
 }
+.modal-body video {
+    width: 100%;      
+    max-height: 80vh; 
+    object-fit: contain; 
+}
+
 
 @keyframes pulse-border {
     0% {
