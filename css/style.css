@@ -176,11 +176,6 @@ h6,
     .navbar-toggler {
         margin-right: 10px;
     }
-
-    /* Video Modal */
-    .modal-dialog {
-        max-width: 90%;
-    }
     
     .hero-header .col-lg-8 {
         text-align: center !important;
@@ -312,12 +307,6 @@ h6,
     border-top: 11px solid transparent;
     border-bottom: 11px solid transparent;
 }
-.modal-body video {
-    width: 100%;      
-    max-height: 80vh; 
-    object-fit: contain; 
-}
-
 
 @keyframes pulse-border {
     0% {
@@ -333,7 +322,7 @@ h6,
 
 #videoModal .modal-dialog {
     position: relative;
-    max-width: 800px;
+    max-width: 300px;
     margin: 60px auto 0 auto;
 }
 
@@ -354,6 +343,12 @@ h6,
     color: #FFFFFF;
     background: #000000;
     opacity: 1;
+}
+
+#videoPlayer {
+    width: 100%;
+    height: auto;
+    max-height: 80vh; /* Adjust based on your needs */
 }
 
 .section-title::before {

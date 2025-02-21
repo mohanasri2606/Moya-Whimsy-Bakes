@@ -27,22 +27,19 @@
         $(window).resize(toggleNavbarMethod);
     });
 
-
-    // Modal Video
     $(document).ready(function () {
-        var $videoSrc;
-        $('.btn-play').click(function () {
-            $videoSrc = $(this).data("src");
+        $(".btn-play").click(function () {
+            var videoSrc = $(this).attr("data-src"); // Get video source from button
+            $("#videoSource").attr("src", videoSrc); // Set the source in the modal
+            $("#videoPlayer")[0].load(); // Reload the video to apply the new source
+            $("#videoPlayer")[0].play(); // Autoplay the video
         });
-        console.log($videoSrc);
 
-        $('#videoModal').on('shown.bs.modal', function (e) {
-            $("#video").attr('src', $videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0");
-        })
-
-        $('#videoModal').on('hide.bs.modal', function (e) {
-            $("#video").attr('src', $videoSrc);
-        })
+        // Stop video when modal is closed
+        $("#videoModal").on("hide.bs.modal", function () {
+            $("#videoPlayer")[0].pause(); // Pause video
+            $("#videoPlayer")[0].currentTime = 0; // Reset to the beginning
+        });
     });
 
 
