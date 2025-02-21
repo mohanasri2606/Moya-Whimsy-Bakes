@@ -102,8 +102,8 @@
     <div class="order-container">
         <form id="order-form" action="https://formspree.io/f/mkgoygen" method="POST">
             <h2>Order Your Cake</h2>
-            <label for="cake">Cake</label>
-            <input type="text" id="cake" name="Dutch Truffle Cakes [1kg]" readonly>
+            <label for="cake">Cake:</label>
+            <input type="text" id="cake" name="cake" value="Dutch Truffle Cakes [1kg]" readonly>
 
             <label for="name">Your Name:</label>
             <input type="text" id="name" name="name" required>
@@ -129,34 +129,6 @@
         const params = new URLSearchParams(window.location.search);
         const cakeType = params.get('cake') || 'Dutch Truffle Cakes [1kg]';
         document.getElementById('cake').value = cakeType;
-
-        // Cake options based on category
-        const cakeOptions = {
-            "Birthday Cake": [
-                "Chocolate Bliss Cake [1kg]",
-                "Rainbow Sprinkle Delight [1kg]",
-                "Strawberry Fantasy Cake [1kg]",
-                "Butterscotch Caramel Crunch [1kg]",
-                "Red Velvet Cake [1kg]",
-                "Funfetti Celebration Cake [1kg]"
-            ],
-            "Custom Cake": [
-                "Galaxy Theme Cake [1kg]",
-                "Unicorn Magic Delight [1kg]",
-                "Superhero Smash Cake [1kg]",
-                "Floral Watercolor Cake [1kg]",
-                "Personalized Photo Cake [1kg]",
-                "Rustic Charm Cake [1kg]"
-            ],
-            "Wedding Cake": [
-                "Classic White Elegance [1kg]",
-                "Royal Rose Gold Cake [1kg]",
-                "Floral Lace Delight [1kg]",
-                "Champagne Drizzle Cake [1kg]",
-                "Ivory Pearl Perfection [1kg]",
-                "Golden Glaze Wedding Cake [1kg]"
-            ]
-        };
 
         // Populate cake selection dropdown
         const cakeDropdown = document.getElementById('cake-selection');
