@@ -1,12 +1,12 @@
 /********** Template CSS **********/
 :root {
-    --primary: #ff709e;
+    --primary: #E88F2A;
     --secondary: #FAF3EB;
     --light: #FFFFFF;
     --dark: #2B2825;
 }
 
-.text-primary .font-secondary {
+.font-secondary {
     font-family: 'Pacifico', cursive;
 }
 
@@ -108,7 +108,7 @@ h6,
 
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link.active {
-    color: #fc83aa;
+    color: var(--primary);
 }
 
 @media (max-width: 991.98px) {
@@ -118,57 +118,9 @@ h6,
 }
 
 .hero-header {
-    background: url(../img/hero.jpg) center no-repeat;
-    background-size: 1350px 635px;
-    height: 100vh; 
+    background: url(../img/hero.jpg) top right no-repeat;
+    background-size: cover;
 }
-.hero-header .dreamy-frosting {
-    color: #ffeff4; 
-}
-/* about start */
-.m-0 {
-    font-size: 34px;
-}
-.col-lg-4 .m-0 {
-    font-size: 22px;
-}
-.mb-4 {
-    color: #ff3a78;
-}
-.display-4 {
-    font-size: 28px;
-}
-.pb-5{
-    text-align:justify;
-    hyphens: auto;
-}
-/* about ends */
-#title {
-    margin-bottom: 0.1rem !important;
-}
-.container-fluid {
-    padding-top: 0 !important; /* Ensures no extra padding at the top */
-}
-/* pages start*/
-.dropdown-menu {
-    font-family: 'Oswald', sans-serif;
-    padding: 30px 15px;
-    font-size: 18px;
-    font-weight: 500;
-    text-transform: uppercase;
-    color: var(--light);
-    outline: none;
-    transition: .5s;
-}
-#service-para {
-    text-align: justify;
-}
-/* pages start*/
-/* footer start */
-.mt-3 {
-    text-align: justify;
-}
-/* footer ends */
 
 .btn-play {
     position: relative;
@@ -220,16 +172,10 @@ h6,
     width: 0;
     height: 0;
     left: -1px;
-    border-left: 16px solid #fc83aa;
+    border-left: 16px solid var(--primary);
     border-top: 11px solid transparent;
     border-bottom: 11px solid transparent;
 }
-.modal-body video {
-    width: 100%;      
-    max-height: 80vh; 
-    object-fit: contain; 
-}
-
 
 @keyframes pulse-border {
     0% {
