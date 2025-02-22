@@ -26,6 +26,7 @@
         toggleNavbarMethod();
         $(window).resize(toggleNavbarMethod);
     });
+    
 
     $(document).ready(function () {
         $(".btn-play").click(function () {
